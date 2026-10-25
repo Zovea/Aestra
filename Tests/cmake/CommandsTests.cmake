@@ -215,6 +215,15 @@ target_include_directories(LatencyReportTest PRIVATE
 add_test(NAME LatencyReportTest COMMAND LatencyReportTest)
 set_tests_properties(LatencyReportTest PROPERTIES LABELS "commands;muse;latency;pdc;contract:application")
 
+add_executable(MuseCreatedIdsTest Commands/MuseCreatedIdsTest.cpp)
+target_link_libraries(MuseCreatedIdsTest PRIVATE AestraAudioCore)
+target_include_directories(MuseCreatedIdsTest PRIVATE
+    ${CMAKE_SOURCE_DIR}/AestraAudio/include
+    ${CMAKE_SOURCE_DIR}/AestraCore/include
+)
+add_test(NAME MuseCreatedIdsTest COMMAND MuseCreatedIdsTest)
+set_tests_properties(MuseCreatedIdsTest PROPERTIES LABELS "commands;muse;contract:application")
+
 # --- Host capabilities -------------------------------------------------------
 # The seam the application registers settings./view./browser. verbs into.
 # Append new targets for this group at the END of this sub-section.
