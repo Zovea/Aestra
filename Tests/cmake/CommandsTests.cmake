@@ -224,6 +224,16 @@ target_include_directories(MuseMasterEffectsTest PRIVATE
 add_test(NAME MuseMasterEffectsTest COMMAND MuseMasterEffectsTest)
 set_tests_properties(MuseMasterEffectsTest PROPERTIES LABELS "commands;muse;mastering;contract:application")
 
+add_executable(CompSidechainEndToEndTest Commands/CompSidechainEndToEndTest.cpp)
+target_link_libraries(CompSidechainEndToEndTest PRIVATE AestraAudioCore)
+target_include_directories(CompSidechainEndToEndTest PRIVATE
+    ${CMAKE_SOURCE_DIR}/AestraAudio/include
+    ${CMAKE_SOURCE_DIR}/AestraAudio/include/Plugin
+    ${CMAKE_SOURCE_DIR}/AestraCore/include
+)
+add_test(NAME CompSidechainEndToEndTest COMMAND CompSidechainEndToEndTest)
+set_tests_properties(CompSidechainEndToEndTest PROPERTIES LABELS "commands;muse;routing;sidechain;contract:application")
+
 # --- Host capabilities -------------------------------------------------------
 # The seam the application registers settings./view./browser. verbs into.
 # Append new targets for this group at the END of this sub-section.
