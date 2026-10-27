@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 The public repository is currently on a `0.x` pre-beta line. The release target tracked in the roadmap is **v1 Beta in December 2026**.
 
+## Unreleased
+
+### Added
+- Experimental FL21–24 project importer for editable notes, measured playlist placements and explicitly mapped neutral audio, with unsupported features reported.
+
 ## v0.4.0-alpha — Hardening Milestone (2026-05-20)
 
 ### Security
