@@ -1,3 +1,15 @@
+## About this fork
+
+This is a contribution fork of [Aestra](https://github.com/currentsuspect/Aestra).
+
+The [FL Studio project importer branch](https://github.com/Zovea/Aestra/tree/feat/fl-studio-project-import) contains an experimental tool for inspecting FLP files and exporting supported project data for Aestra. It does not recreate FL Studio plugins or guarantee a complete project conversion. Imported notes remain silent until instruments are mapped.
+
+Inspection is read-only. Export requires an output path, and unsupported project content must be treated as a partial import rather than silently presented as a faithful conversion.
+
+The importer is not in this fork's default branch and does not yet have an upstream pull request. Support for one tested FL Studio version does not establish support for every version.
+
+The upstream project documentation follows.
+
 # Aestra
 
 ![License](https://img.shields.io/badge/License-ASSAL%20v1.1-blue)
